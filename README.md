@@ -21,6 +21,60 @@ bundle
 bundle exec rails g solidus_reports:install
 ```
 
+Usage
+------
+To create a report, you need to:
+
+Extend the ReportsController in a decorator to create the action
+
+```ruby
+# app/overrides/spree/admin/reports/add_my_report.rb
+module AwesomeStore
+  module Admin
+    module ReportsController
+      module AddMyReportDecorator
+        def my_report
+          #code
+        end
+
+        def initialize
+          ::Spree::Admin::ReportsController.add_available_report!(:my_report)
+          super
+        end
+      end
+    end
+  end
+end
+
+::Spree::Admin::ReportsController.prepend AwesomeStore::Admin::ReportsController::AddMyReportDecorator if ::Spree::Admin::ReportsController.included_modules.exclude?(AwesomeStore::Admin::ReportsController::AddMyReportDecorator)
+```
+
+Create a route in routes.rb
+```ruby
+Spree::Core::Engine.routes.draw do
+    namespace :admin do
+      resources :reports, only: [:index] do
+        collection do
+          get :my_report
+          post :my_report
+        end
+      end
+    end
+  end
+  mount Spree::Core::Engine, at: '/'
+```
+Create a template in app/views/spree/admin/reports/my_report.html.erb
+
+Add an entry into your translations 
+```yaml
+# config/locales/en.yml
+en:
+  hello: "Hello world"
+  spree:
+    my_report: My Report
+    my_report_description: A New Report
+```
+
 Testing
 -------
 
