@@ -29,8 +29,8 @@ Gem::Specification.new do |s|
   s.executables = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency 'solidus_core', ['>= 2.5', '< 4']
-  s.add_dependency 'solidus_support', '~> 0.5'
+  s.add_dependency 'solidus_core', ['>= 4.1', '< 5']
+  s.add_dependency 'solidus_support', '~> 0.14'
 
   s.add_development_dependency 'rspec-activemodel-mocks'
   s.add_development_dependency 'solidus_dev_support'
