@@ -2,7 +2,7 @@
 
 # frozen_string_literal: true
 
-app_root = 'spec/dummy'
+app_root = "spec/dummy"
 
 unless File.exist? "#{app_root}/bin/rails"
   system "bin/rake", app_root or begin # rubocop:disable Style/AndOr
@@ -12,4 +12,4 @@ unless File.exist? "#{app_root}/bin/rails"
 end
 
 Dir.chdir app_root
-exec 'bin/rails', *ARGV
+exec "bin/rails", *ARGV
