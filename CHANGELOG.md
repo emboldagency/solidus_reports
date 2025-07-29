@@ -1,5 +1,25 @@
 # Changelog
 
+## [v1.2.0](https://github.com/solidusio-contrib/solidus_reports/tree/v1.2.0) (2023-03-27)
+
+[Full Changelog](https://github.com/solidusio-contrib/solidus_reports/compare/v1.1.0...v1.2.0)
+
+**Merged pull requests:**
+
+- Test with Ruby 3.2 [\#45](https://github.com/solidusio-contrib/solidus_reports/pull/45) ([tvdeyen](https://github.com/tvdeyen))
+- Add ruby 3 support [\#44](https://github.com/solidusio-contrib/solidus_reports/pull/44) ([elia](https://github.com/elia))
+
+## [v1.1.0](https://github.com/solidusio-contrib/solidus_reports/tree/v1.1.0) (2022-10-13)
+
+[Full Changelog](https://github.com/solidusio-contrib/solidus_reports/compare/v1.0.0...v1.1.0)
+
+**Merged pull requests:**
+
+- Explicitly remove can :admin, :reports ability [\#42](https://github.com/solidusio-contrib/solidus_reports/pull/42) ([tvdeyen](https://github.com/tvdeyen))
+- Allow Ruby 3.0 [\#40](https://github.com/solidusio-contrib/solidus_reports/pull/40) ([tvdeyen](https://github.com/tvdeyen))
+- Allow Solidus 3.2 [\#39](https://github.com/solidusio-contrib/solidus_reports/pull/39) ([tvdeyen](https://github.com/tvdeyen))
+- Update to use forked solidus\_frontend when needed [\#37](https://github.com/solidusio-contrib/solidus_reports/pull/37) ([waiting-for-dev](https://github.com/waiting-for-dev))
+
 ## [v1.0.0](https://github.com/solidusio-contrib/solidus_reports/tree/v1.0.0) (2021-11-08)
 
 [Full Changelog](https://github.com/solidusio-contrib/solidus_reports/compare/90d079c6d5a51d300ea8404230c0bb99cb5e1ffb...v1.0.0)
