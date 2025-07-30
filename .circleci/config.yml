@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   # Required for feature specs.
-  browser-tools: circleci/browser-tools@1.1
+  # browser-tools: circleci/browser-tools@1.1 # Not using circle CI
 
   # Always take the latest version of the orb, this allows us to
   # run specs against Solidus supported versions only without the need
