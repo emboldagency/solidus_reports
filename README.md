@@ -1,8 +1,8 @@
 # SolidusReports
 
-[![release.yml](https://embold.net/api/github/badge/workflow-status.php?repo=solidus_reports&workflow=release.yml)](https://github.com/emboldagency/solidus_reports/actions/workflows/release.yml) <!--
--->[![ci.yml](https://embold.net/api/github/badge/workflow-status.php?repo=solidus_reports&workflow=ci.yml)](https://github.com/emboldagency/solidus_reports/actions/workflows/ci.yml) <!--
--->![Semantic Versioning](https://embold.net/api/github/badge/semver.php?repo=solidus_reports)
+![Semantic Versioning](https://embold.net/api/github/badge/semver.php?repo=solidus_reports) <!--
+--> [![release.yml](https://embold.net/api/github/badge/workflow-status.php?repo=solidus_reports&workflow=release.yml)](https://github.com/emboldagency/solidus_reports/actions/workflows/release.yml) <!--
+--> [![ci.yml](https://embold.net/api/github/badge/workflow-status.php?repo=solidus_reports&workflow=ci.yml)](https://github.com/emboldagency/solidus_reports/actions/workflows/ci.yml)
 
 This extension adds the reports module to [Solidus](https://github.com/solidusio/solidus) Admin. The reports section was extracted into this extension.
 
@@ -16,16 +16,13 @@ It may include customizations, fixes, or changes specific to the needs of embold
 Add `solidus_reports` to your Gemfile:
 
 ```ruby
-gem 'solidus_reports', github: 'solidusio-contrib/solidus_reports'
+gem 'solidus_reports', github: 'emboldagency/solidus_reports', branch: 'master
 ```
 
 Bundle your dependencies and run the installation generator:
 
 ```shell
-bundle
-```ruby
-gem 'solidus_reports', github: 'emboldagency/solidus_reports'
-```
+bundle install
 bundle exec rails g solidus_reports:install
 ```
 
