@@ -1,4 +1,4 @@
-name: Release Gem
+name: Build and Release Gem
 
 on:
   release:
@@ -7,22 +7,4 @@ on:
 
 jobs:
   build-and-publish:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2
-          bundler-cache: true
-      - name: Build gem
-        run: |
-          gem build solidus_reports.gemspec
-      - name: Publish to GitHub Packages
-        env:
-          GEM_HOST_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gem push --key github --host https://rubygems.pkg.github.com/emboldagency solidus_reports-*.gem
+    uses: emboldagency/.github/.github/workflows/ruby-gem-release.yml@master
