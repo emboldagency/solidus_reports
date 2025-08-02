@@ -5,5 +5,6 @@ en:
   spree:
     admin:
       tab:
+        Reports: Reports
         reports: Reports
     reports: Reports
