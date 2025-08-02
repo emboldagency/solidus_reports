@@ -5,9 +5,10 @@ module SolidusReports
     # Solidus 4.0 and later use a different way to define menu items
     if Gem::Version.new(Spree.solidus_version) >= Gem::Version.new("4.2")
       new_item = Spree::BackendConfiguration::MenuItem.new(
-        label: "Reports",
+        label: "reports",
         icon: "file",
-        condition: -> { can?(:admin, :reports) }
+        condition: -> { can?(:admin, :reports) },
+        url: :admin_reports_path,
       )
     else
       REPORT_TABS ||= [:reports].freeze
