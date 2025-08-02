@@ -3,7 +3,7 @@
 module SolidusReports
   class Configuration < Spree::Preferences::Configuration
     # Solidus 4.0 and later use a different way to define menu items
-    if Gem::Version.new(Spree.solidus_version) >= Gem::Version.new('4.0')
+    if Gem::Version.new(Spree.solidus_version) >= Gem::Version.new("4.2")
       new_item = Spree::BackendConfiguration::MenuItem.new(
         label: "Reports",
         icon: "file",
